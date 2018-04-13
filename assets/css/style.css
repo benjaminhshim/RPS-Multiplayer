@@ -1,0 +1,117 @@
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+#user-name {
+    width: 500px;
+    text-align: center;
+}
+
+
+
+.form-inline {
+    text-align: center;
+    display: inline-block;
+}
+
+.name-input {
+    text-align: center;
+}
+
+.game-div {
+    border: 1px solid black;
+    height: 300px;
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+
+}
+
+input[type=text] {
+    width: 75%;
+    
+}
+
+#player-1,
+#player-2 {
+    position: relative;
+}
+
+.p1-stats,
+.p2-stats {
+    position: absolute;
+    bottom: 0;
+}
+
+
+.chatbox {
+    width: 500px;
+    min-width: 390px;
+    height: 600px;
+    background: #fff;
+    padding: 10px;
+    margin: 20px auto;
+    border: 1px solid black;
+}
+
+.chatlogs {
+    padding: 10px;
+    width: 100%;
+    height: 450px;
+    overflow-y: scroll;
+}
+
+.chatlogs::-webkit-scrollbar {
+    width: 10px;
+}
+
+.chatlogs::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgba(0,0,0,.1);
+}
+
+.chat {
+    display: flex;
+    flex-flow: row-wrap;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.chat .user-photo {
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+    border-radius: 50%;
+}
+
+.chat .chat-message {
+    width: 80%;
+    padding: 15px;
+    margin: 5px 10px 0;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+.player-1 .chat-message {
+    background: rgb(81, 231, 199);
+}
+
+.player-2 .chat-message {
+    background: #ccc;
+    order: -1;
+}
+
+.chat-form textarea {
+    background: #fbfbfb;
+    width: 75%;
+    height: 50px;
+    border: 2px solid #eee;
+    border-radius: 3px;
+    resize: none;
+}

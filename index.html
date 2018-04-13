@@ -1,0 +1,132 @@
+<!doctype html>
+<head>
+    <meta charset='UTF-8'>
+    <title>RPS Multiplayer</title>
+
+    <!-- BOOTSTRAP -->
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div>
+        <h1>ROCK PAPER SCISSORS</h1>
+    </div>
+
+    <!-- USER NAME INPUT -->
+    <div class="container name-input">
+
+        <form class="form-inline">
+            
+            <div class="form-group mx-sm-3 mb-2">
+                <input type="name" class="form-control" id="user-name" placeholder="NAME">
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-2" id="start-button">START</button>
+
+        </form>
+
+    </div>
+
+
+    <div class="user-turn"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4 game-div" id="player-1">
+
+                <div id="player-1-div">
+
+                    <div id="player-1-name">Waiting for Player 1 ...</div>
+                    <div class="player-1-choice player-choice" id="player-1-rock" data="rock"></div>
+                    <div class="player-1-choice player-choice" id="player-1-paper" data="paper"></div>
+                    <div class="player-1-choice player-choice" id="player-1-scissors" data="scissors"></div>
+
+                    <div class="p1-stats">
+                        <!-- <div id="player-1-wins"></div>
+                        <div id="player-1-losses"></div> -->
+                        <p>Wins: 0 Losses: 0</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-4 game-div" id="result">
+                
+            </div>
+
+            <div class="col-4 game-div" id="player-2">
+
+                <div id="player-2-div">
+
+                    <div id="player-2-name">Waiting for Player 2 ...</div>
+                    <div class="player-2-choice player-choice" id="player-2-rock" data="rock"></div>
+                    <div class="player-2-choice player-choice" id="player-2-paper" data="paper"></div>
+                    <div class="player-2-choice player-choice" id="player-2-scissors" data="scissors"></div>
+
+                    <div class="p2-stats">
+                        <!-- <div id="player-2-wins"></div>
+                        <div id="player-2-losses"></div> -->
+                        <p>Wins: 0 Losses: 0</p>
+
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- CHATBOX -->
+        <!-- <div class="chatbox">
+            <div class="chatlogs">
+
+                <div class="chat player-1">
+                    <div class="user-photo"></div>
+                    <p class="chat-message">Player 1</p>
+                </div>
+
+                <div class="chat player-2">
+                    <div class="user-photo"></div>
+                    <p class="chat-message">Player 2</p>
+                </div>
+
+            </div>
+
+            <div class="chat-form">
+                <textarea></textarea>
+                <button>Send</button>
+            </div>
+        </div> -->
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/javascript/app.js"></script>
+
+</body>
