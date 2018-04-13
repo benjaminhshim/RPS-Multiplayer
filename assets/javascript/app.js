@@ -31,7 +31,7 @@ var config = {
 
 
 
-
+  // READ DATA FROM FIREBASE AND PRINT TO WINDOW
   database.ref().on("value", function(snapshot) {
 
     var ts = snapshot.val();
@@ -72,7 +72,7 @@ $('#start-button').on('click', function(event) {
         opponentLock = true;
     }
 
-
+    // STORE EACH USER'S USERNAME, WIN COUNT AND LOSS COUNT TO FIREBASE
     database.ref().set({
         players: {
             One: {
@@ -93,6 +93,7 @@ $('#start-button').on('click', function(event) {
 });
 
 
+// CREATE FUNCTIONALITY WHEN USER PICKS ROCK, PAPER OR SCISSORS
 $('.player-choice').click(function() {
 
     if (userRpsLock == false && opponentRpsLock == false) {
@@ -123,10 +124,12 @@ $('.player-choice').click(function() {
         opponentRpsLock = true;
     }
 
+    // IF BOTH USERS HAVE A SELECTION OF RPS, CHECK RESULTS WITH A PROVIDED FUNCTION
     if (userRpsLock == true & opponentRpsLock == true) {
         checkRPS();
     }
 
+    // STORE EACH USER'S STATS TO FIREBASE
     database.ref().set({
         players: {
             One: {
@@ -145,6 +148,7 @@ $('.player-choice').click(function() {
 
 });
 
+// CHECKS THE OUTCOME OF THE ROUND BASED ON RPS RULES
 function checkRPS () {
     if (playerOneChoice == 'rock' && playerTwoChoice == 'scissors') {
         playerOneWins++;
@@ -221,7 +225,8 @@ function checkRPS () {
 
 }
 
-// COUNTDOWN
+// 3 SECOND COUNTDOWN BETWEEN EACH ROUND
+    // DISPLAY WHICH USER WON
 var seconds = 3;
 var intervalId;
 
@@ -245,7 +250,7 @@ function stop() {
 }
 
 
-// NEW ROUND
+// NEW ROUND AFTER 3 SECONDS
 function newRound() {
 
     playerOneDiv.empty();
@@ -281,8 +286,6 @@ function newRound() {
 
 
 };
-
-
 
 
 
